@@ -24,12 +24,14 @@ app.use(cors())
 app.use(cookieParser());
 app.use(express.json())
 
+//route
 app.use("/api/users",usersRoute)
 app.use("/api/hotels",hotelsRoute)
 app.use("/api/rooms",roomsRoute)
+
 app.use("/api/auth",authRoute)
 
-
+//main
 app.listen(3000,()=>{
     connect()
     console.log("haha")
